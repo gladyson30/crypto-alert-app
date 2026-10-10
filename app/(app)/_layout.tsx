@@ -15,6 +15,9 @@ export default function AppLayout() {
       }}
     >
       <Tabs.Screen name="cotacao" options={{ title: 'Cotação' }} />
+      <Tabs.Screen name="alertas" options={{ title: 'Alertas' }} />
+      <Tabs.Screen name="novo-alerta" options={{ href: null }} />
+      
     </Tabs>
   );
 }

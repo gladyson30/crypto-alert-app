@@ -25,3 +25,7 @@ export async function estaAutenticado(): Promise<boolean> {
   const token = await obterToken();
   return token !== null && token !== '';
 }
+export async function deletarConta(): Promise<void> {
+  await api.delete('/usuarios/deletar');
+  await SecureStore.deleteItemAsync(CHAVE_TOKEN);
+}
